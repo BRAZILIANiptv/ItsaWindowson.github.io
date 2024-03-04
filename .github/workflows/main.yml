@@ -1,0 +1,38 @@
+            - name: mpv-win-build
+  # You may pin to the exact commit or the version.
+  # uses: skbeh/mpv-winbuild-action@0af77e0fe340f14a2a55d9595a2f0ca097a565ff
+  uses: skbeh/mpv-winbuild-action@v0.4
+                      - name: setup-mesa-dist-win
+  # You may pin to the exact commit or the version.
+  # uses: ssciwr/setup-mesa-dist-win@6657792673a5d162d5f244db991ba45b4b68989f
+  uses: ssciwr/setup-mesa-dist-win@v2.0.0
+  with:
+    # The mesa-dist-win release version to use
+    version: # optional, default is 23.3.3
+    # The mesa-dist-win build type to use
+    build-type: # optional, default is release-msvc
+    # The mesa-dist-win deployment choice to use
+    deployment-choice: # optional, default is 1
+                      - name: Setup Git for Windows SDK
+  # You may pin to the exact commit or the version.
+  # uses: git-for-windows/setup-git-for-windows-sdk@051878759d7860bc66072799fd72d13a4288db6e
+  uses: git-for-windows/setup-git-for-windows-sdk@v1.10.0
+  with:
+    # The subset (if any) of the SDK: minimal, makepkg-git, build-installers, or full
+    flavor: # optional, default is minimal
+    # The architecture of the SDK: x86_64, i686 or aarch64. Note that "aarch64" only supports the "full" flavor for now.
+    architecture: # optional, default is x86_64
+    # Whether to start in MSYS mode (defaults to false)
+    msys: # optional, default is false
+    # Where to write the SDK files
+    path: # optional, default is 
+    # Whether to clean up SDK files. This is only needed on self-hosted runners that are reused for multiple jobs.
+    cleanup: # optional, default is false
+    # Whether to log files as they are extracted
+    verbose: # optional, default is 250
+    # Use @actions/cache to accelerate this Action
+    cache: # optional, default is auto
+    # Personal access token (PAT) used to call into GitHub's REST API. We recommend using a service account with the least permissions necessary. Also when generating a new PAT, select the least scopes necessary. [Learn more about creating and using encrypted secrets](https://help.github.com/en/actions/automating-your-workflow-with-github-actions/creating-and-using-encrypted-secrets)
+
+    github-token: # optional, default is ${{ github.token }}
+          
