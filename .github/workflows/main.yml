@@ -34,5 +34,5 @@
     cache: # optional, default is auto
     # Personal access token (PAT) used to call into GitHub's REST API. We recommend using a service account with the least permissions necessary. Also when generating a new PAT, select the least scopes necessary. [Learn more about creating and using encrypted secrets](https://help.github.com/en/actions/automating-your-workflow-with-github-actions/creating-and-using-encrypted-secrets)
 
-    github-token: # optional, default is ${{ github.token }}
+    github-token: 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
           
